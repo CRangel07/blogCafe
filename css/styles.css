@@ -114,6 +114,13 @@ img {
 
 .logo {
     color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo i{
+    font-size: 2.5rem;
 }
 
 .logo__nombre {
@@ -140,23 +147,9 @@ img {
     text-align: center;
     font-size: 1.8rem;
 }
-
-.navegacion__enlace::after {
-    content: "";
-    position: absolute;
-    top: 35px;
-    left: 0;
-    height: 3px;
-    width: 0;
-    transition: width 0.4s;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    background-color: #ffffff;
-}
-
-.navegacion__enlace:hover::after {
-    width: calc(100% + 15px);
-
+.navegacion__enlace--activo{
+    color: burlywood;
+    font-size: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -164,6 +157,23 @@ img {
         display: grid;
         grid-template-columns: 2fr 1fr;
         column-gap: 4rem;
+    }
+    .navegacion__enlace::after {
+        content: "";
+        position: absolute;
+        top: 35px;
+        left: 0;
+        height: 3px;
+        width: 0;
+        transition: width 0.4s;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        background-color: #ffffff;
+    }
+    
+    .navegacion__enlace:hover::after {
+        width: calc(100% + 15px);
+    
     }
 }
 
@@ -192,9 +202,15 @@ img {
 .boton--primario {
     background-color: var(--black);
 }
+.boton--primario:hover {
+    background-color: #1f1f1f;
+}
 
 .boton--secundario {
     background-color: var(--primary);
+}
+.boton--secundario:hover {
+    background-color: #2D2327;
 }
 
 @media (min-width: 768px) {
